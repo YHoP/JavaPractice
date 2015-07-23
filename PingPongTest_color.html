@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ping-Pong Test</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<style>
+.bg {
+	margin:80px;
+	min-height:1000px;
+    background-image: -webkit-linear-gradient(top, #FFFFCC, #66CCFF);
+    background-image: -o-linear-gradient(buttom, #FFFFCC, #66CCFF);
+    background-image: -moz-linear-gradient(buttom, #FFFFCC, #66CCFF);
+    background-image: linear-gradient(to buttom, #FFFFCC, #66CCFF);
+	font-family: Calibri;
+	font-size: medium;
+}
+.pingtext {color: red}
+.pongtext {color: blue}
+</style>
+
+<body class="bg">
+	<h1><span class="pingtext">Ping</span>-
+	<span class="pongtext">Pong</span>!</h1>
+
+	<script>
+	var Input = prompt("What number would you like me to ping-pong up to?", "");
+
+	for (var y = 1; y <= Input; y++)  {
+		var n3 = (y % 3);
+		var n5 = (y % 5);
+		var bullet = "\u2022 &nbsp;&nbsp;";
+		var pingtxt = "Ping";
+		var pongtxt = "Pong";
+	
+		if (n3 == 0 && n5 == 0) {
+			document.writeln(bullet.fontcolor("white") + pingtxt.fontcolor("red")
+			 + " - " + pongtxt.fontcolor("blue") + "!" + "<br>");
+			}
+		else if (n3 == 0) {
+			document.writeln(bullet.fontcolor("yellow")  + pingtxt.fontcolor("red") + "<br>");
+			}
+		else if (n5 == 0) {
+			document.writeln(bullet.fontcolor("pink") + pongtxt.fontcolor("blue") + "<br>");
+			}
+		else {
+			document.writeln(bullet + y + "<br>");
+			}
+	}
+		</script>
+</body>
+</html>

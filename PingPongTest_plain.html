@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ping-Pong Test</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body class="bg">
+	<h1>Ping-Pong!</h1>
+
+	<script>
+	var Input = prompt("What number would you like me to ping-pong up to?", "");
+
+	for (var y = 1; y <= Input; y++)  {
+		var n3 = (y % 3);
+		var n5 = (y % 5);
+		var bullet = "\u2022 &nbsp;&nbsp;";
+		var pingtxt = "Ping";
+		var pongtxt = "Pong";
+
+	
+		if (n3 == 0 && n5 == 0) {
+			document.writeln(bullet + pingtxt + " - " + pongtxt + "!" + "<br>");
+			}
+		else if (n3 == 0) {
+			document.writeln(bullet + pingtxt + "<br>");
+			}
+		else if (n5 == 0) {
+			document.writeln(bullet + pongtxt + "<br>");
+			}
+		else {
+			document.writeln(bullet + y + "<br>");
+			}
+	}
+	</script>
+</body>
+</html>
